@@ -55,3 +55,7 @@ https://excalidraw.com/#json=SIuQrQnGQr9DGkCVc8BWD,JqVceoohF0UsTfllkzdRmw
 9. Lombok
 10. Devtools
 11. mysql connector
+
+**step 2**
+Create Database scm20 in mysql
+spring application.propertices : add database with userName withpassword
