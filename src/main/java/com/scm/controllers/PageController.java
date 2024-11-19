@@ -35,8 +35,8 @@ public class PageController {
         System.out.println("Home page handler");
         // sending data to view
         model.addAttribute("name", "Substring Technologies");
-        model.addAttribute("youtubeChannel", "Learn Code With Durgesh");
-        model.addAttribute("githubRepo", "https://github.com/learncodewithdurgesh/");
+        model.addAttribute("scaler portfolio", "https://www.scaler.com/academy/profile/668a865d794b/");
+        model.addAttribute("githubRepo", "https://github.com/swapnil699/Smart-Contact-");
         return "home";
     }
 
@@ -75,8 +75,6 @@ public class PageController {
     public String register(Model model) {
 
         UserForm userForm = new UserForm();
-        // default data bhi daal sakte hai
-        // userForm.setName("Durgesh");
         // userForm.setAbout("This is about : Write something about yourself");
         model.addAttribute("userForm", userForm);
 
@@ -98,22 +96,8 @@ public class PageController {
             return "register";
         }
 
-        // TODO::Validate userForm[Next Video]
 
         // save to database
-
-        // userservice
-
-        // UserForm--> User
-        // User user = User.builder()
-        // .name(userForm.getName())
-        // .email(userForm.getEmail())
-        // .password(userForm.getPassword())
-        // .about(userForm.getAbout())
-        // .phoneNumber(userForm.getPhoneNumber())
-        // .profilePic(
-        // "https://www.learncodewithdurgesh.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdurgesh_sir.35c6cb78.webp&w=1920&q=75")
-        // .build();
 
         User user = new User();
         user.setName(userForm.getName());
@@ -123,7 +107,7 @@ public class PageController {
         user.setPhoneNumber(userForm.getPhoneNumber());
         user.setEnabled(false);
         user.setProfilePic(
-                "https://www.learncodewithdurgesh.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdurgesh_sir.35c6cb78.webp&w=1920&q=75");
+                "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fprofile%2520picture%2F&psig=AOvVaw2M1o3dTDDn5VR3HLnk_E5L&ust=1732080081998000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJDc9r3T54kDFQAAAAAdAAAAABAE");
 
         User savedUser = userService.saveUser(user);
 
